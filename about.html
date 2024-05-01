@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  
+</head>
+<body>
+    <div class="wrapper">
+        <div class="navbar">
+            <div class="logo-container">
+                <a href="home.html" class="logo"><i class="fas fa-pizza-slice"></i>FEAST FUSION</a>
+            </div>
+            <div class="nav-items">
+                <a href="home.html">Home</a>
+                <a href="about.html">About</a>
+                <div class="menu-btn">
+                    <a href="menu.html">Menu</a>
+
+                    <div class="dropdown">
+                       <div class="options">
+                            <a href="pizza.html">Pizza</a>
+                            <a href="Pasta.html">Pasta</a>
+                            <a href="Beverages.html">Beverages</a>
+                            <a href="desserts.html">Desserts</a>
+                            <a href="breads.html">Breads</a>
+                            <a href="more.html">More</a>
+                       </div>
+                    </div>
+                </div>
+                <a href="gallery.html">Gallery</a>
+                <a href="contact.html">Contact</a>
+                <div class="search">
+                    <label for="search">Search</label>
+                    <input type="text" id="search"placeholder="Search...">
+                </div>
+            </div>
+            <div class="icons">
+                <div id="cart" class="fas fa-shopping-cart"></div>
+                <div id="login" class="fas fa-user"></div>
+                <div id="menu" class="fas fa-bars"></div>
+            </div>
+            <div class="shopping-cart">
+                <h2 class="total">Total:$0.00</h2>
+                <a href="#" class="btn">Checkout Cart</a>
+
+                <a href="payment.html" class="btn" id="order-now-btn">Order Now</a>
+            </div>
+
+            <form action="" class="login-form" name="myForm" ng-app="myApp" ng-controller="myCtrl" novalidate>
+                <h4>Login Form</h4>
+                <p>
+                    <input type="email" name="email" ng-model="email" placeholder="Enter Your Email" class="boxes" required>
+                    <span ng-show="myForm.email.$dirty && myForm.email.$invalid">
+                        <span ng-show="myForm.email.$error.required">Email Required !!</span>
+                        <span ng-show="myForm.email.$error.email">Invalid Email Address !!</span>
+                    </span>
+                </p>
+                <p>
+                    <input type="password" name="password" ng-model="password" placeholder="Enter Your Password" class="boxes" required>
+                    <span ng-show="myForm.password.$dirty && myForm.password.$invalid">
+                        <span ng-show="myForm.password.$error.required">Password Required !!</span>
+                    </span>
+                </p>
+                <div class="remember">
+                    <input type="checkbox" id="remember-me">
+                    <label for="remember-me">Remember Me</label>
+                </div>
+                <p>
+                <input type="submit" value="Login" class="btn" ng-disabled="myForm.email.$dirty && myForm.email.$invalid ||
+                myForm.password.$dirty && myForm.password.$invalid" >
+                </p>
+            </form>
+        </div>
+        <div class="heading">
+            <h1>About Us</h1>
+            <p><a href="home.html">home>>>></a>About</p>
+        </div>
+
+        <div class="about">
+            <div class="row">
+                <div class="image">
+                    <img src="./images/about.jpg" alt="***" class="about-img">
+                </div>
+
+                <div class="content">
+                    <h3>🍴Welcome to Our Pizza Outlet 🍴</h3>
+                    <p>
+                        At FEAST FUSION , we believe that great food brings people together. With a passion for flavor and a commitment to quality, we've crafted a culinary experience that's as unforgettable as it is delicious. <br> <br>
+                        
+                        🌟 Our Story:
+                        FEAST FUSION began with a simple dream: to serve up mouthwatering meals made with love and care. Founded by SHAILAV JUSTA in 2010, our journey started in a humble kitchen with a handful of recipes and a whole lot of ambition. Since then, we've grown into a beloved food destination, serving up [describe your specialty cuisine or signature dishes] to locals and visitors alike. <br> <br>
+                        
+                        🍽️ Our Menu:
+                        From savory starters to decadent desserts, our menu is a celebration of flavor and freshness. Whether you're craving PIZZA  or looking to explore something new, we've got something to satisfy every palate. We source the finest ingredients and infuse each dish with our own unique twist, ensuring that every bite is a culinary delight. <br> <br>
+                        
+                        🌍 Our Philosophy:
+                        At FEAST FUSION , we're more than just a place to eat – we're a community. We believe in supporting local farmers and producers, reducing food waste, and creating a welcoming space where everyone feels like family. From our kitchen to your table, we're dedicated to making a positive impact on our environment and our community. <br> <br>
+                    </p>
+                    <p class="additional-content hidden"> 
+                        👩‍🍳 Meet the Team:
+                        Behind every delicious dish is a team of talented individuals who are passionate about food and hospitality. From our skilled chefs to our friendly waitstaff, we're here to provide you with an exceptional dining experience from start to finish. Get to know the faces behind the food and feel free to say hello next time you visit! <br> <br>
+                        
+                        📍 Visit Us:
+                        Located in the heart of DEHRADUN, FEAST FUSION  is the perfect place to indulge your taste buds and make lasting memories with friends and family. Whether you're dining in, taking out, or ordering delivery, we can't wait to serve you. <br> <br>
+                        
+                        Come hungry, leave happy – that's the FEAST FUSION  promise. We look forward to welcoming you soon.
+                    </p>
+                        <a href="#" class="btn1">Read More</a>
+                </div>
+            </div>
+        </div>
+        <div class="blogs">
+            <h1 class="title">Our <span>Blogs</span></h1>
+            <div class="box-container">
+
+                <div class="box">
+                    <img src="./images/blog-1.jpg" alt="">
+                    <div class="icons">
+                        <a href="#"><i class="fas fa-calendar"></i>10 April,2024</a>
+                        <a href="#"><i class="fas fa-user"></i>by Admin</a>
+                    </div>
+                    <h3>Slices of Delight: Exploring The World of Pizzas</h3>
+                    <p></p>
+                    <a href="#" class="btn1">Read More</a>
+                </div>
+
+
+                <div class="box">
+                    <img src="./images/blog-2.jpg" alt="">
+                    <div class="icons">
+                        <a href="#"><i class="fas fa-calendar"></i>10 April,2024</a>
+                        <a href="#"><i class="fas fa-user"></i>by Admin</a>
+                    </div>
+                    <h3>Slices of Delight: Exploring The World of Pizzas</h3>
+                    <p></p>
+                    <a href="#" class="btn1">Read More</a>
+                </div>
+
+                <div class="box">
+                    <img src="./images/blog-3.jpg" alt="">
+                    <div class="icons">
+                        <a href="#"><i class="fas fa-calendar"></i>10 April,2024</a>
+                        <a href="#"><i class="fas fa-user"></i>by Admin</a>
+                    </div>
+                    <h3>Slices of Delight: Exploring The World of Pizzas</h3>
+                    <p></p>
+                    <a href="#" class="btn1">Read More</a>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="footer">
+            <div class="box-container">
+                <div class="box">
+                    <h3>Find Us Here</h3>
+                    <div class="share">
+                        <a href="#" class="fab fa-facebook-f"></a>
+                        <a href="#" class="fab fa-twitter"></a>
+                        <a href="#" class="fab fa-instagram"></a>
+                        <a href="#" class="fab fa-linkedin"></a>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <h3>Contact Us</h3>
+                    <p>9015118744</p>
+                    <a href="#" class="link">justashailav02@gmail.com</a>
+                </div>
+
+                <div class="box">
+                    <h3>Localization</h3>
+                    
+                </div>
+            </div>
+
+            <div class="credit">Created By <span>justahub</span> | all rights reserved</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        var app=angular.module('myApp',[]);
+        app.controller('myCtrl',function($scope){
+        $scope.email='justashailav02@gmail.com';
+        $scope.password='............';
+ 
+    });
+    </script>
+</body>
+</html>
